@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cat Profle</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="row">
+            <h1>Details Page for <%= cat.name %></h1>
+        </div>
+        <div class="row">
+            <img src=".<%= cat.image %>" alt="<% cat.name %>">
+        </div>
+        <div class="row">
+            <h3>Favorite food: <%= cat.food %></h3>
+            <h3>Age: <%= cat.age %></h3>
+            <div>
+                <h3>Favorite Sleeping Spots:</h3>
+                <% for (s of cat.sleeping) { %>
+                    <h3><%= s %></h3>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
